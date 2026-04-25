@@ -1,0 +1,24 @@
+:root {
+  --text: #6b6375;
+  --text-h: #08060d;
+  --bg: #fff;
+  --border: #e5e4e7;
+}
+
+body {
+  margin: 0;
+}
+
+/* ⚠️ corrigido: não trava mais o layout */
+#root {
+  width: 100%;
+  margin: 0 auto;
+  text-align: center;
+  min-height: 100vh;
+}
+
+/* corrigido */
+.imagemProduto {
+  width: 200px;
+  height: 200px;
+}
