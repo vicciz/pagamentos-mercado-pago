@@ -34,7 +34,7 @@ const FormularioCompra = () => {
             <button onClick={()=> navigate("/formPagamento")} type="submit" style={{ marginTop: '1rem', padding: '0.5rem 1rem', fontSize: '1rem', cursor: 'pointer' }}>
                 Finalizar Compra
             </button>
-            //após finalizar a compra o usuario é redirecionado a tela de pagamento        </form>
+          </form>
     </div>
   );
 };
