@@ -30,7 +30,7 @@ function Vitrine() {
       <p>{produto.descricao}</p>
 
       <img
-        style={{ width: "50%", height: "auto", margin: "1rem auto" }}
+        style={{ width: "200px", height: "200px", margin: "1rem auto" }}
         src={produto.imagem}
         alt={produto.nome}
       />
