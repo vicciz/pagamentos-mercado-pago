@@ -1,5 +1,13 @@
 import { useNavigate } from "react-router-dom";
 
+const produto = {
+  id: 1,
+  nome: "jarra de vidro",
+  preco: 10.0,
+  descricao: "Descrição do produto 1",
+  imagem: "https://imgs.search.brave.com/zpHUEIAM-XL_Bl1gZvd1zCoJ43GmPDTQxoE9j-OicWk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9tZWRp/YS5nZXR0eWltYWdl/cy5jb20vaWQvOTg5/NTIwODgvcHQvZm90/by9nbGFzcy1waXRj/aGVyLW9mLXdhdGVy/LmpwZz9zPTYxMng2/MTImdz0wJms9MjAm/Yz0wTldxcTNudWZW/cXBqUjRFZE1leDlm/czJncUJERVJ1ZHh6/UHBsYzhSRXF3PQ",
+};
+
 function Vitrine() {
   const navigate = useNavigate();
 
