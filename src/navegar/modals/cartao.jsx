@@ -1,12 +1,15 @@
 import { useEffect } from "react";
 import { initMercadoPago, CardPayment } from "@mercadopago/sdk-react";
 
-const Cartao = () => {
+export default function Cartao() {
 
-  useEffect(() => {
-    initMercadoPago("APP_USR-efbc1a9a-dceb-4ab0-abdf-0d0a1ce9a4ab"); // 🔥 sua public key
+ useEffect(() => {
 
-  }, []);
+  initMercadoPago(
+    import.meta.env.VITE_MP_PUBLIC_KEY
+  );
+
+}, []);
 
   return (
     <div style={{
@@ -23,13 +26,15 @@ const Cartao = () => {
         onSubmit={async (data) => {
         console.log("TOKEN:", data.token);
 
-        const response = await fetch("http://localhost:3001/criar-pagamento", {
+        const response = await fetch("http://10.0.0.120:3001/cartao", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
           },
           body: JSON.stringify({
-            token: data.token
+            token: data.token,
+            payment_method_id: data.payment_method_id,
+            payer: data.payer
           })
         });
 
@@ -38,7 +43,6 @@ const Cartao = () => {
   }}
 />
     </div>
-  );
-};
+  )
 
-export default Cartao;
+}

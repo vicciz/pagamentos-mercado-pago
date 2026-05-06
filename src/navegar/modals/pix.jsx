@@ -25,7 +25,7 @@ export default function Pix() {
       setPixData(null);
 
       const response = await fetch(
-        "http://10.0.0.120:3001/pix/criar-pix",
+        "http://10.0.0.120:3001/pix",
         {
           method: "POST",
           headers: {
@@ -39,6 +39,9 @@ export default function Pix() {
       );
 
       const data = await response.json();
+      response.status === 200
+        ? console.log("PIX gerado com sucesso:", data)
+        : console.error("Erro ao gerar PIX:", data);
 
       console.log("RESPOSTA PIX:", data);
 

@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import Vitrine from "./navegar/Vitrine";
+import TesteDeJson from "./navegar/testedejson";
 import FormCompra from "./navegar/FormCompra";
 import FormPagamento from "./navegar/FormPagamento";
 

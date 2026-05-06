@@ -2,7 +2,7 @@ import express from "express";
 
 const router = express.Router();
 
-router.post("/criar-pix", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
     const { email, amount } = req.body;
 
@@ -14,7 +14,7 @@ router.post("/criar-pix", async (req, res) => {
     }
 
     const response = await fetch(
-      "https://api.mercadopago.com/v1/orders",
+      "https://api.mercadopago.com/v1/payment_links",
       {
         method: "POST",
         headers: {
@@ -49,6 +49,7 @@ router.post("/criar-pix", async (req, res) => {
 
     console.log("STATUS PIX:", response.status);
     console.log("RESPOSTA PIX:", data);
+    console.log (data.req);
 
     // ❌ erro vindo do Mercado Pago
     if (!response.ok) {
